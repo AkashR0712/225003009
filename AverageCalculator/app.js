@@ -5,7 +5,6 @@ require('dotenv').config();
 const app = express();
 const port = 9876;
  
-//handling authorization code 
 
 const windowSize = 10;
 let window = new Set();
@@ -68,8 +67,6 @@ app.get('/numbers/:numberid', async (req, res) => {
         avg: average
     });
 });
-
-
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
